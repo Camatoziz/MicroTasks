@@ -11,5 +11,13 @@ type ArrayStudentsType={
 export const NewComponent=(props: NewComponentType)=>{
     debugger
     return (
-    <div>New component</div>
+    <div>
+        <ul>
+            {props.students.map(el=>{
+                return <div>
+                    <li>Name {el.name} Age {el.age}</li>
+                    </div>
+            })}
+        </ul>
+    </div>
     )}
