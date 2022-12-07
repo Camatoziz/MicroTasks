@@ -1,7 +1,25 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {NewComponent} from './NewComponent';
+
+const App=()=>{
+    const firstSubscriber=()=>{
+        console.log("Hello, I am Vasya!")
+    }
+    return(
+        <div>
+            <button onClick={firstSubscriber}>YouTube-1</button>
+            {/*<button onClick={()=>{console.log("Hello!")}}>YouTube-2</button>*/}
+        </div>
+    )
+}
+
+
+
+
+
+
+
 
 /*import {Header} from './site/Header';
 import {Footer} from './site/Footer';
@@ -19,7 +37,7 @@ function App() {
 
 export default App;*/
 
-function App() {
+/*function App() {
     const topCars = [
         {manufacturer: 'BMW', model: 'm5cs'},
         {manufacturer: 'Mercedes', model: 'e63s'},
@@ -30,7 +48,7 @@ function App() {
         <div>
             <NewComponent cars={topCars}/>
         </div>
-    )
+    )*/
 
     /*const [students, setStudents] = useState([
             {id: 1, name: "James", age: 8},
@@ -51,6 +69,6 @@ function App() {
         <NewComponent students={students}/>
     </div>
     )*/
-}
+
 
 export default App;
