@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { NewComponent } from './NewComponent';
+import {NewComponent} from './NewComponent';
+
 /*import {Header} from './site/Header';
 import {Footer} from './site/Footer';
 import {Body} from './site/Body';
@@ -19,7 +20,19 @@ function App() {
 export default App;*/
 
 function App() {
-    const [students, setStudents] = useState([
+    const topCars = [
+        {manufacturer: 'BMW', model: 'm5cs'},
+        {manufacturer: 'Mercedes', model: 'e63s'},
+        {manufacturer: 'Audi', model: 'rs6'}
+    ]
+
+    return (
+        <div>
+            <NewComponent cars={topCars}/>
+        </div>
+    )
+
+    /*const [students, setStudents] = useState([
             {id: 1, name: "James", age: 8},
             {id: 2, name: "Robert", age: 18},
             {id: 3, name: "John", age: 28},
@@ -37,6 +50,7 @@ function App() {
     <div>
         <NewComponent students={students}/>
     </div>
-    )}
+    )*/
+}
 
 export default App;
