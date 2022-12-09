@@ -54,7 +54,7 @@ const App = () => {
         {banknots: 'Dollars', value: 50, number: ' x1234567890'},
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
-    const [filter, setFilter] = useState('All')
+    const [filter, setFilter] = useState<FilterType>('All')
     let currentMoney = money
     if (filter === 'RUBLS') {
         currentMoney = money.filter(el => el.banknots === 'RUBLS')
@@ -62,7 +62,7 @@ const App = () => {
     if (filter === 'Dollars') {
         currentMoney = money.filter(el => el.banknots === 'Dollars')
     }
-    const Filter = (banknots: string) => {
+    const Filter = (banknots: FilterType) => {
         setFilter(banknots)
     }
 

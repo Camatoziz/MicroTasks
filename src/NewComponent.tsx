@@ -3,7 +3,7 @@ import React from 'react';
 import app from './App';
 type NewComponentType = {
     filteredArray: Array<NewComponentTypeArray>
-    callBack:()=>string
+    callBack:any
 }
 type NewComponentTypeArray = {
     banknots: string
