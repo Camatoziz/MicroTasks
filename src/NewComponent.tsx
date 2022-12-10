@@ -11,9 +11,18 @@ type NewComponentTypeArray = {
     number: string
 }
 export const NewComponent = (props: NewComponentType) => {
-    const Filter = (banknots: string) => {
-        props.callBack()
+    const onAllButtonClick = () => {
+        props.callBack('All')
     }
+
+    const onRublslButtonClick = () => {
+        props.callBack('RUBLS')
+    }
+
+    const onDollarsButtonClick = () => {
+        props.callBack('Dollars')
+    }
+
     return (
         <div>
             <ul>
@@ -25,9 +34,9 @@ export const NewComponent = (props: NewComponentType) => {
                     </li>
                 })}
             </ul>
-            <Button name={'All'} callBack={() => Filter('All')}/>
-            <Button name={'RUBLS'} callBack={() => Filter('RUBLS')}/>
-            <Button name={'Dollars'} callBack={() => Filter('Dollars')}/>
+            <Button name={'All'} callBack={props.callBack}/>
+            <Button name={'RUBLS'} callBack={props.callBack}/>
+            <Button name={'Dollars'} callBack={props.callBack}/>
         </div>
     )
 }
