@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import FullInput from './FullInput';
 
-const Mt0102 = () => {
+export const MT0102 = () => {
     const [messageList, setMessageList]=useState([
         {message: "Hello"},
         {message: "My"},
@@ -14,6 +14,7 @@ const Mt0102 = () => {
 
     return (
         <div>
+            <h3>FullInput</h3>
             <FullInput addMessage={addMessage} buttonName={"+"}/>
             <ul>
                 {messageList.map(m=><li>{m.message}</li>)}
@@ -22,4 +23,3 @@ const Mt0102 = () => {
     )
 };
 
-export default Mt0102;
